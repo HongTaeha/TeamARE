@@ -5,7 +5,7 @@ import polls
 import requests
 from django.http import HttpResponse
 from Lawdcd.models import Lawdcd
-
+import json
 # Create your views here.
 
 
@@ -20,8 +20,12 @@ def introduce_index(request):
     return render(request, 'introduce/index.html',context)
 
 def data(request):
-	response = requests.get('https://teamare.run.goorm.io/data')
-	return HttpResponse(str(response.content))
+    if request.method =='POST':
+        request_data = ((request.body).decode('utf-8'))
+        request_data = json.loads(request_data)
+        content = request_data['content']
+
+    return HttpResponse(content)
 
 
 def introduce_login(request):
