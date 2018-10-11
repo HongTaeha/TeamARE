@@ -30,15 +30,15 @@ function showSub(){
 	var jongro = ["Gaho","Gungi","Gongpyeong","Geonam","Gugi","Nackone","Donei","Meo","Moyack","Bongik","Buam","Sajik","Samcheong","sogeck","Sungin","Shinhyo","Yeahgi","Okin","Wally","Waoryong","Wonnam","Wonsa","Lee Hwa","Insa","In","Jang Sa","Juckseon","Changsin","Cheongun","Cheongjin","Chungsin","Tongin","Pyungchang","Hyehwa","Hyoja","Hyoje"];
 	var jung = ["Sogong","Shindang","Jeong","Jungrim","Hwang Hak"];
 	var jungang = ["Mangoo","Munmock","Mock","Sangbong","Shin ","Junghwa"];
-	
-	// Debugging 중일때는 주석해놓을 것. 
-// for(i=0; i<gu.options.length; i++) {
-//     if(gu.options[i].selected === true) {
-//         val = gu.options[i].value;         // 어떤 값이 선택되었는지 확인해보고 
-// 		break;								// 선택된 값을 val 에 저장.
-//     }
-// }
-	val =1 // 1로 디버깅 디폴드 모드
+	//
+	// Debugging 중일때는 주석해놓을 것.
+for(i=0; i<gu.options.length; i++) {
+    if(gu.options[i].selected === true) {
+        val = gu.options[i].value;         // 어떤 값이 선택되었는지 확인해보고
+		break;								// 선택된 값을 val 에 저장.
+    }
+}
+
 	if(val == 1 )
 		{
 			changeItme = gangnam;   //1이 선택되었을 경우에 

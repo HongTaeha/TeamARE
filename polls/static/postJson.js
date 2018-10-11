@@ -19,12 +19,11 @@ function jPost(){
             break;								// 선택된 값을 valDong 에 저장.
         }
     }
-		dongVar = 'Gap'; // Gap으로 디버깅 디폴트 
-    
+
 	    var searchButton = document.getElementById("sBtn");
 	
 		 xhr = new XMLHttpRequest();
-		 xhr.open("POST","https://teamare.run.goorm.io/data",true);
+		 xhr.open("POST","http://127.0.0.1:8000/data",true);
 		 xhr.setRequestHeader("Content-type","application/json");
 		
 		var obj= new Object();
@@ -60,7 +59,6 @@ function jPost(){
 // 			   }
 
 // 		});
-		guVar = 1; 
 	
 	
 	

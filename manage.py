@@ -3,6 +3,8 @@ import os
 import sys
 
 if __name__ == "__main__":
+
+    os.environ['DJANGO_SETTINGS_MODULE']= "mysite.settings"
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
     try:
         from django.core.management import execute_from_command_line
@@ -19,4 +21,6 @@ if __name__ == "__main__":
                 "forget to activate a virtual environment?"
             )
         raise
+    if len(sys.argv) == 3:
+        sys.argv.pop(2)
     execute_from_command_line(sys.argv)
