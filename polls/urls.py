@@ -11,4 +11,5 @@ urlpatterns = [
 	url(r'^charts',views.introduce_charts, name='introduce_charts'),
 	url(r'^study',views.introduce_study, name='introduce_study'),
     url(r'^data',views.data, name='data'),
+
 ]

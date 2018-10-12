@@ -20,14 +20,24 @@ def introduce_index(request):
     return render(request, 'introduce/index.html',context)
 
 def data(request):
-    if request.method =='POST':
-        request_data = ((request.body).decode('utf-8'))
-        request_data = json.loads(request_data)
-        content = request_data['content']
+    if request.is_ajax():
+        if request.method == 'POST':
+            data = request.POST.all()
+            print
+            data
+            return HttpResponse( json.dumps( {'data': data} ), content_type="application/json" )
+    else:
+        print
+        "you are not in ajax"
+        return render( 'poll/ajax_test.html', locals() )
 
-    return HttpResponse(content)
 
-
+def ajax_test(request):
+    if request.is_ajax():
+        message = "This is ajax"
+    else:
+        message = "Not ajax"
+    return HttpResponse(message)
 def introduce_login(request):
 	return render(request, 'introduce/login.html',{})
 

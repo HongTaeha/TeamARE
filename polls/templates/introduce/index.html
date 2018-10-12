@@ -91,8 +91,7 @@
       </ul>
 
     </nav>
-
-    <div id="wrapper">
+      <div id="wrapper">
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
         <li class="nav-item active">
@@ -128,7 +127,7 @@
             <span>Tables</span></a>
         </li>
       </ul>
-      <div id="content-wrapper">
+            <div id="content-wrapper">
         <div class="container-fluid">
 
           <!-- Breadcrumbs-->
@@ -138,8 +137,7 @@
             </li>
             <li class="breadcrumb-item active">Overview</li>
           </ol>
-
-			<!--Section: Table-->
+               			<!--Section: Table-->
             <section class="mb-5">
 
                 <!--Top Table UI-->
@@ -164,7 +162,7 @@
 
                             <!--Name Of Group -->
                             <select id="GuID" onchange="showSub()">
-                                 <option disabled selected>Location Gu( Group )</option> 
+                                 <option disabled selected>Location Gu( Group )</option>
 								 <option value="1">Gangnam</option>
 								 <option value="2">Gangdong</option>
 								 <option value="3">Gangbuk</option>
@@ -182,7 +180,7 @@
 								 <option value="15">Seocho</option>
 								 <option value="16">Seongdong</option>
 								<option value="17">Seongbuk</option>
-								 <option value="18">Seongpa</option>		
+								 <option value="18">Seongpa</option>
 								<option value="19">Yangcheon</option>
 								<option value="20">Teongdeungpo</option>
 								<option value="21">Yongsan</option>
@@ -190,29 +188,29 @@
 								<option value="23">Jongno</option>
 								<option value="24">Jung</option>
 								<option value="25">Jungnang</option>
-								
+
                             </select>
-							
-								
+
+
                             <!--/Blue select-->
-						
+
                         </div>
-                        <!--Grid column-->						
+                        <!--Grid column-->
                         <div class="col-lg-3 col-md-6">
 
                             <!--Blue select-->
-						
+
                             <select id="DongID">
-                                <option value="" disabled selected>INSERT</option> 
-								 <option value="1"></option>		
-								 <option value="2"></option>		
-								 <option value="3"></option>		
-								 <option value="4"></option>		
-								
-					
+                                <option value="" disabled selected>INSERT</option>
+								 <option value="1"></option>
+								 <option value="2"></option>
+								 <option value="3"></option>
+								 <option value="4"></option>
+
+
                             </select>
-							
-							
+
+
                             <!--/Blue select-->
 
                         </div>
@@ -231,56 +229,8 @@
                     <!--Grid row-->
 
                 </div>
-                <!--Top Table UI-->
-   
-             <!--시군구코드로 DB 탐색-->
-                    <div class="card mb-3">                        
-                        <div class="card-header">
-                              <i class="fas fa-table"></i>
-                                <div class="card-body">
-                                  <div class="table-responsive">
-                                       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                           <thead>
-                                               <tr>
-                                                   <th>Local_code</th>
-                                                   <th>Deal_ymd</th>
-                                                   <th>Address</th>
-                                                   <th>X</th>
-                                                   <th>Y</th>
-                                            </tr>
-                                               <thead>
-                                               <tfoot>
-                                                   <tr>                                                    
-                                                       <th>Local_code</th>
-                                                       <th>Deal_ymd</th>
-                                                       <th>Address</th>
-                                                       <th>X</th>
-                                                       <th>Y</th>
-                                                </tr>                      
-                                            </tfoot>
-                                         <!--  
-                                           <tbody>
-                                               {% for d in Lawdcd %}
-                                                {% if d.Local_code == 11140 %}
-                                               <tr> 
-                                                   <th>{{d.Local_code}}</th>
-                                                   <th>{{d.Deal_ymd}}</th>
-                                                   <th>{{d.Address}}</th>
-                                                   <th>{{d.X}}</th>
-                                                   <th>{{d.Y}}</th>
-                                            </tr>
-                                               {% endif %}          
-                                        {% endfor%}
-                                    </tbody>
-                                    -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-           
-                
-			
-			
+            </section>
+
         <div class="row">
           <!-- naver map api-->
          <head>
@@ -289,11 +239,11 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
             <title>간단한 지도 표시하기</title>
                         <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=XORQXLjnF_42QQm3fDA2">            </script>
-             <script src="{% static 'mapscript' %}.js"></script>  
+             <script src="{% static 'mapscript' %}.js"></script>
         </head>
         <body>
-            <div id="map" style="width: 100%; height: 600px; position: relative; overflow: hidden;"
-                                 </div>
+            <div id="map" style="width: 100%; height: 600px; position: relative; overflow: hidden;">
+
             <script>
                 var map = new naver.maps.Map('map', {
         center: new naver.maps.LatLng(37.3595704, 127.105399), //지도의 초기 중심 좌표
@@ -309,14 +259,13 @@
 map.setOptions("mapTypeControl", true); //지도 유형 컨트롤의 표시 여부
 
             </script>
-                                                                                                                          
-        </body>   
-		
+            </div>
+        </body>
 
-      </div>
+
       <!-- /.content-wrapper -->
 
-    </div>
+
     <!-- /#wrapper -->
 
     <!-- Scroll to Top Button-->
@@ -361,8 +310,18 @@ map.setOptions("mapTypeControl", true); //지도 유형 컨트롤의 표시 여�
     <!-- Demo scripts for this page-->
     <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
     <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
+        </div>
 
-  </body>
+
+
+
+
+        </div>
+
+   </div>
+    </div>
+
+  </body>>
 
 </html>  
 

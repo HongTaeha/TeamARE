@@ -21,11 +21,11 @@ function jPost(){
     }
 
 	    var searchButton = document.getElementById("sBtn");
-	
+
 		 xhr = new XMLHttpRequest();
-		 xhr.open("POST","http://127.0.0.1:8000/data",true);
+		 xhr.open("POST","/data",true);
 		 xhr.setRequestHeader("Content-type","application/json");
-		
+
 		var obj= new Object();
 
 		obj.si = "Seoul";
@@ -41,24 +41,24 @@ function jPost(){
 		console.log(err);
 		 }
 
-// 		   $.ajax({
-// 			type : "POST",
-
-// 			dataType : "json",
-
-// 			url : "/data",
-
-// 			data : {
-// 			json : jsonData
-// 			},
-// 			success : function(json) {
-// 						console.log("hi"); 
-// 			},
-// 			error : function(xhr,errmsg,err){
-// 					   	console.log("bye"); 
-// 			   }
-
-// 		});
+		//    $.ajax({
+		// 	type : "POST",
+		//
+		// 	dataType : "json",
+		//
+		// 	url : "/login",
+		//
+		// 	data : {
+		// 	json : jsonData
+		// 	},
+		// 	success : function(json) {
+		// 				console.log("hi");
+		// 	},
+		// 	error : function(xhr,errmsg,err){
+		// 			   	console.log("bye");
+		// 	   }
+		//
+		// });
 	
 	
 	
